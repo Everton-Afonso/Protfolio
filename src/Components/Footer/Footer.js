@@ -9,16 +9,19 @@ import
         FooterContacts, 
         FooterText, 
         FooterLink,
+        Facebook,
+        Instagram,
+        Linkedin,
         Website,
         WebsiteRights,
-        WebsiteRightsImg
+        SocialIcons
     } 
 from './style';
 
 const Footer = () => {
     return (
         <>
-            <FooterContainer>
+            <FooterContainer id="contatos">
                 <FooterTop>
                     <FooterLogo>
                         <a href={'../Header/index.js#navbar'}>
@@ -28,9 +31,17 @@ const Footer = () => {
                     </FooterLogo>
                     <FooterContacts>
                         <FooterText>Contatos</FooterText>
-                        <FooterLink>Facebook</FooterLink>
-                        <FooterLink>Instagem</FooterLink>
-                        <FooterLink>Linkdin</FooterLink>
+                        <SocialIcons>
+                            <FooterLink href='/' target='_blank' aria-label='Facebook'>
+                                <Facebook /> Facebook 
+                            </FooterLink>
+                            <FooterLink href='/' target='_blank' aria-label='Instagram'>
+                                <Instagram /> Instagem
+                            </FooterLink>
+                            <FooterLink href='/' target='_blank' aria-label='LinkedIn'>
+                                <Linkedin /> Linkdin
+                            </FooterLink>
+                        </SocialIcons>
                     </FooterContacts>
                 </FooterTop>
             </FooterContainer>
