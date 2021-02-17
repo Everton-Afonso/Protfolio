@@ -22,7 +22,7 @@ const NavBar = () => {
     return (
         <>
             <IconContext.Provider value={{color: '#fff'}}>
-                <Nav id="home"> {/* romver o id daqui e colocae na pagina home*/}
+                <Nav> {/* romver o id daqui e colocae na pagina home*/}
                     <NavBarContainer>
                         <NavLogo onClick={closeMenu}>
                             <NavIcon />

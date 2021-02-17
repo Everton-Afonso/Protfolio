@@ -30,6 +30,10 @@ export const FooterLogo = styled.div`
     margin: 16px;
     width: 50%;
     border-right: 1px solid #fff;
+
+    p {
+        font-size: 16px;
+    }
     
     @media (max-width: 700px){
         border-right: none;
@@ -44,6 +48,7 @@ export const FooterContacts = styled.div`
     display: flex;
     flex-direction: column;
     width: 50%;
+    align-items: center;
 `;
 export const SocialIcons = styled.div`
     display: flex;

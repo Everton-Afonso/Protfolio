@@ -58,7 +58,7 @@ export const NavMenu = styled.ul`
         display: flex;
         flex-direction: column;
         width: 100%; // alterar os valor altera o tamanho do menu
-        height: 60vh;
+        height: 45vh;
         position: absolute;
         top: 50px;
         left: ${({click}) => (click ? 0 : '-100%')};

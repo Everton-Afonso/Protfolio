@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../Img/Logo.png'
+import Logo from '../Img/Logo.png'
 import 
     { 
         FooterContainer, 
@@ -19,14 +19,13 @@ import
 from './style';
 
 const Footer = () => {
+    const Ano = new Date().getFullYear();
     return (
         <>
             <FooterContainer id="contatos">
                 <FooterTop>
                     <FooterLogo>
-                        <a href={'../Header/index.js#navbar'}>
-                            <FooterLogoImg src={Logo} alt="My logo"/>
-                        </a>
+                        <FooterLogoImg src={Logo} alt="My logo"/>
                         <p>Obrigado por sua visita</p>
                     </FooterLogo>
                     <FooterContacts>
@@ -47,7 +46,7 @@ const Footer = () => {
             </FooterContainer>
             <Website>
                 <WebsiteRights>
-                    Everton
+                   {Ano} Everton Atavio Afonso
                 </WebsiteRights>
             </Website>
         </>
