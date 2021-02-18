@@ -2,16 +2,16 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import GlobalStyle from './GlobalStyles';
 import Home from './Components/Pages/Home/index';
-import { NavBar, Footer } from './Components';
+import About from './Components/Pages/About/index';
+import { NavBar, Footer, InfoAbout } from './Components';
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
       <NavBar />
-      <Switch>
-        <Route path='/' exact component={Home}/>
-      </Switch>
+      <Home />
+      <About />
       <br/>
       <br/>
       <br/>

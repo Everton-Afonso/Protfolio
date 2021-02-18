@@ -10,12 +10,11 @@ import
         Headding,
         Subtitle,
         ImgWrapper,
-        Img,
-        TextAnimation
+        Img
     } 
 from './style';
 
-export const InfoSection = (
+export const InfoAbout = (
     {
         lightBg, 
         imgStart, 
@@ -32,19 +31,20 @@ export const InfoSection = (
 ) => {
     return (
         <>
-            <InfoSec lightBg={lightBg} id="home">
+            <InfoSec lightBg={lightBg} id="sobre">
                 <Container>
                     <InfoRow imgStart={imgStart}>
                         <InfoColumn>
                             <TextWrapper>
-                                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                                 <Headding lightText={lightText}>{headline}</Headding>
-                                <Subtitle lightTextDesc={lightTextDesc}>
-                                    <TextAnimation>
-                                        {description}
-                                    </TextAnimation>
-                                </Subtitle>
+                                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
+                                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                             </TextWrapper>
+                        </InfoColumn>
+                        <InfoColumn>
+                            <ImgWrapper start={start}>
+                                <Img src={img} alt={alt} />
+                            </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>
                 </Container>
@@ -53,4 +53,4 @@ export const InfoSection = (
     )
 }
 
-export default InfoSection;
+export default InfoAbout;
