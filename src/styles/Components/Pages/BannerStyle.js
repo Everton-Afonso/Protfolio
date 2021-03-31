@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 export const InfoSec = styled.div`
     color: #fff;
     padding: 90px 0;
-    background: ${({lightBg}) => (lightBg ? '#fff' : '#191d20')};
+    background: ${({lightBg}) => (lightBg ? '#F2F3F5' : '#191d20')};
 `;
 export const InfoRow = styled.div`
     display: flex;
@@ -49,7 +50,7 @@ export const Headding = styled.h1`
         font-size: 20px;
     }
 `;
-export const Subtitle = styled.p`
+export const Subtitle = styled.div`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: 18px;
@@ -81,7 +82,7 @@ export const TextAnimation = styled.p`
         from {
             width: 0;
         } to{
-            width: 14.5em;
+            width: 15.5em;
         }
     }
 
@@ -92,4 +93,10 @@ export const TextAnimation = styled.p`
             border-right-color: transparent;
         }
   }
+`;
+export const IconLeft = styled(IoIosArrowBack)`
+   margin: -6px;
+`;
+export const IconRight = styled(IoIosArrowForward)`
+   margin: -6px;
 `;

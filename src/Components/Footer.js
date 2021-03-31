@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../Img/Logo.png'
 import 
     { 
         FooterContainer, 
@@ -16,7 +15,7 @@ import
         WebsiteRights,
         SocialIcons
     } 
-from './style';
+from '../styles/Components/FooterStyles';
 
 const Footer = () => {
     const Ano = new Date().getFullYear();
@@ -25,7 +24,7 @@ const Footer = () => {
             <FooterContainer id="contatos">
                 <FooterTop>
                     <FooterLogo>
-                        <FooterLogoImg src={Logo} alt="My logo"/>
+                        <FooterLogoImg src='Img/Logo.png' alt="My logo"/>
                         <p>Obrigado por sua visita</p>
                     </FooterLogo>
                     <FooterContacts>

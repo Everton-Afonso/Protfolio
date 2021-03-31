@@ -13,7 +13,7 @@ import
         NavItem,
         NavLinks
     } 
-from './style';
+from '../styles/Components/NavBarStyle';
 
 const NavBar = () => {
     const [ click, setClick ] = useState(false);
@@ -34,7 +34,7 @@ const NavBar = () => {
                             }
                         </MobileIcon>
                         <NavMenu onClick={handleClick} click={click}>
-                            <NavItem>
+                            <NavItem> 
                                 <NavLinks 
                                     activeClass="active"
                                     to="home"
