@@ -1,0 +1,72 @@
+@import "../../../styles/references";
+
+.container-profile {
+  .content-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .user-avatar {
+      position: relative;
+
+      img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: 2px solid $primary-color;
+        padding: 2px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-color: #7eb942;
+        border-radius: 50%;
+        bottom: 14px;
+        right: 2px;
+        border: 2px solid #fff;
+      }
+    }
+
+    .description {
+      padding: 20px 0px 15px;
+      text-align: center;
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.12rem;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+      }
+
+      span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.93rem;
+        line-height: 24px;
+
+        text-transform: capitalize;
+        font-feature-settings: "calt" off, "kern" off;
+      }
+    }
+
+    .social-icon {
+      display: flex;
+      gap: 15px;
+
+      a {
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+
+  .content-space {
+    border-bottom: 1.5px solid $border-primary;
+    padding: 24px 0;
+  }
+}

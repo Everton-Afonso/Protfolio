@@ -1,8 +1,10 @@
+import { InformationMenu } from "./components/InformationMenu";
+
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <section className="portifolio-container">
+      <InformationMenu />
+    </section>
   );
 }
 
