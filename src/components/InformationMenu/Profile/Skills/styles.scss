@@ -1,0 +1,17 @@
+.container-skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+
+  div {
+    background-color: var(--bg-secondary);
+    padding: 2px 10px;
+    border-radius: 12px;
+
+    p {
+      font-weight: 600;
+    }
+  }
+}

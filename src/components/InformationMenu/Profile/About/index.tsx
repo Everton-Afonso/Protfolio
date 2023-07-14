@@ -1,70 +1,35 @@
-import { useEffect, useState } from "react";
-
-import { en_us, pt_br } from "../../../../languages";
+import { data } from "../../../../information";
+import { maskPhone } from "../../../../utils";
 
 import "./styles.scss";
-import useLocalStorage from "../../../../hooks/useLocalStorage";
 
-interface AboutProd {
-  email: string;
-  phone: string;
-  residence: string;
-  city: string;
+interface dataPros {
+  title: string;
+  description: string;
 }
 
-export const About = ({ email, phone, residence, city }: AboutProd) => {
-  const [contactTeste, setContactTeste] = useState<string>("");
-  const [residenceteste, setResidenceTeste] = useState<string>("");
-  const { value, updateLocalStorage } = useLocalStorage("data", "pt_br");
-
-  const handleLanguageCheck = () => {
-    if (value === "pt_br") {
-      updateLocalStorage("en_us");
-      return;
-    }
-    updateLocalStorage("pt_br");
-  };
-
-  const handleLanguageChange = (typeLanguages: string) => {
-    if (typeLanguages === "pt_br") {
-      setContactTeste(pt_br.contact);
-      setResidenceTeste(pt_br.country);
-    } else {
-      setContactTeste(en_us.contact);
-      setResidenceTeste(en_us.country);
-    }
-  };
-
-  useEffect(() => {
-    handleLanguageChange(value);
-  }, [value]);
-
+export const About = () => {
   return (
-    <section className="container-about">
-      <label className="switch-language">
-        <input
-          type="checkbox"
-          onChange={handleLanguageCheck}
-          checked={value === "en_us"}
-        />
-        <span className="slider"></span>
-      </label>
-      <div>
-        <p>Email:</p>
-        <p>{email}</p>
-      </div>
-      <div>
-        <p>{contactTeste}</p>
-        <p>{phone}</p>
-      </div>
-      <div>
-        <p>{residenceteste}</p>
-        <p>{residence}</p>
-      </div>
-      <div>
-        <p>Cidade:</p>
-        <p>{city}</p>
-      </div>
+    <section className="container-about content-space">
+      {data.map((item: dataPros, index: number) => {
+        return (
+          <div key={index}>
+            <p>{item.title}</p>
+            <p>
+              {item.title === "whatsapp:" ? (
+                <a
+                  href={`https://api.whatsapp.com/send?phone=55${item.description}`}
+                  target="_blank"
+                >
+                  {maskPhone(item.description)}
+                </a>
+              ) : (
+                item.description
+              )}
+            </p>
+          </div>
+        );
+      })}
     </section>
   );
 };

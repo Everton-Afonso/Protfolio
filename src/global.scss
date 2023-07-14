@@ -1,9 +1,15 @@
-@import "./references";
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2b2b2b;
+  --secondary-color: #767676;
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffb400;
+  --border-primary: #f0f0f6;
 }
 
 html {
@@ -29,11 +35,18 @@ button {
 }
 
 p {
-  color: $primary-color;
+  color: var(--primary-color);
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 span {
-  color: $secondary-color;
+  color: var(--secondary-color);
 }
 
 .portifolio-container {
